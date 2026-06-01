@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Елена Соколова - Бизнес-психолог & Executive-коуч · Москва</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Geologica:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <meta name="theme-color" content="#0E1A2B">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Бизнес-психолог & Executive-коуч - Москва | Елена Соколова">
+  <meta property="og:description" content="Останавливаю выгорание команд и конфликты топ-менеджмента. Посчитайте, сколько стоит бездействие - калькулятор на странице.">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="description" content="Бизнес-психолог, executive-коуч и организационный консультант в Москве. Работа с выгоранием, конфликтами и текучестью в B2B.">
+  <meta name="robots" content="index, follow">
+
+  <style>
+    /* 3. CSS-переменные (:root) */
+    :root {
+      --c-dark:    #0E1A2B;
+      --c-primary: #1A3A5C;
+      --c-gold:    #C4883A;
+      --c-paper:   #F7F4EF;
+      --c-surface: #FFFFFF;
+      --c-text:    #1A1814;
+      --c-muted:   #6B6560;
+      --c-border:  rgba(0,0,0,0.10);
+
+      --paper:      var(--c-paper);
+      --paper-alt:  #EDEAE3;
+      --surface:    var(--c-surface);
+      --ink:        var(--c-text);
+      --ink-muted:  var(--c-muted);
+      --ink-faint:  #9C9790;
+      
+      --accent:      var(--c-primary);
+      --accent-deep: #0F2A45;
+      --accent-soft: #E4EDF5;
+      
+      --clay:        var(--c-gold);
+      --clay-soft:   #F6E9D6;
+      
+      --border:        var(--c-border);
+      --border-strong: rgba(0,0,0,0.18);
+
+      --shadow-sm: 0 1px 2px rgba(14,26,43,.06), 0 1px 1px rgba(14,26,43,.04);
+      --shadow-md: 0 6px 16px -4px rgba(14,26,43,.12), 0 2px 6px -2px rgba(14,26,43,.06);
+      --shadow-lg: 0 24px 48px -16px rgba(14,26,43,.18);
+
+      --ff-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --ff-body:    'Geologica', system-ui, -apple-system, sans-serif;
+
+      --fs-display: clamp(2.5rem, 1.6rem + 4vw, 4rem);
+      --fs-h2:      clamp(1.6rem, 1.2rem + 1.8vw, 2.4rem);
+      --fs-h3:      1.375rem;
+      --fs-body:    1.0625rem;
+      --fs-sm:      0.9375rem;
+      --fs-label:   0.6875rem;
+
+      --space-1: 4px;  --space-2: 8px;   --space-3: 12px; --space-4: 16px;
+      --space-5: 24px; --space-6: 32px;  --space-7: 48px; --space-8: 64px;
+      --space-9: 96px; --space-10: 128px;
+
+      --r-sm: 6px;  --r: 6px;  --r-lg: 6px;  --r-pill: 999px;
+
+      --max-w: 1100px;
+      --gutter: clamp(20px, 5vw, 64px);
+
+      --dur-1: 140ms; --dur-2: 240ms; --dur-3: 440ms;
+      --ease: cubic-bezier(0.22, 0.61, 0.21, 1);
+
+      --radius:     6px;
+      --shadow:     var(--shadow-md);
+      --transition: 0.2s ease;
+    }
+
+    /* 4. Reset + base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--ff-body);
+      font-weight: 400;
+      color: var(--c-text);
+      background: var(--c-paper);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; }
+    ul { list-style: none; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    input[type="range"] { accent-color: var(--c-primary); }
+
+    :focus-visible {
+      outline: 2px solid var(--c-primary);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    /* Layout */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; }
+    .section {
+      padding: 5rem 0;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .section.visible { opacity: 1; transform: translateY(0); }
+    .section-alt { background: var(--c-surface); }
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--c-gold);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    h1, h2, h3 { font-family: var(--ff-display); color: var(--c-dark); }
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.1;
+      font-weight: 700;
+      letter-spacing: normal;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: normal;
+      margin-bottom: 3rem;
+    }
+    h3 { font-size: 1.375rem; font-weight: 600; }
+    p { max-width: none; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2rem;
+      font-size: 15px;
+      font-weight: 600;
+      min-height: 48px;
+      border-radius: var(--radius);
+      transition: all var(--transition);
+      text-align: center;
+    }
+    .btn-primary { background: var(--c-primary); color: #fff; }
+    .btn-primary:hover { background: var(--c-dark); transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn-outline { border: 1px solid var(--c-primary); color: var(--c-primary); }
+    .btn-outline:hover { background: var(--c-primary); color: #fff; }
+    .cta-primary { animation: pulse-ring 2.5s infinite; }
+
+    /* Icons */
+    .icon {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* A. Sticky Nav */
+    .nav-burger {
+      display: none;
+    }
+    
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--c-dark);
+      color: #fff;
+      border-bottom: 2px solid var(--c-gold);
+      width: 100%;
+    }
+    .nav-inner { width: 100%; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+    .nav-inner::-webkit-scrollbar { display: none; }
+    .nav-container { display: flex; align-items: stretch; width: 100%; padding: 0; }
+    .nav-link {
+      flex: 1;
+      justify-content: center;
+      padding: 1rem 1.25rem;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      transition: color var(--transition), background var(--transition);
+      border-right: 1px solid rgba(255,255,255,0.08);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+    }
+    .nav-link:hover, .nav-link.active { color: #fff; background: rgba(255,255,255,0.1); }
+
+    /* B. Hero */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      padding: clamp(1.75rem, 4vh, 3.5rem) 0;
+      position: relative;
+      background: radial-gradient(circle at top, rgba(196,136,58,0.08), transparent 55%),
+                  var(--c-paper);
+      width: 100%;
+    }
+    .hero .container { width: 100%; }
+    .hero-center {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero h1 {
+      font-family: var(--ff-display);
+      font-size: clamp(1.85rem, 1rem + 2.1vw, 2.6rem);
+      line-height: 1.12;
+      font-weight: 700;
+      margin-bottom: clamp(0.75rem, 1.4vh, 1.4rem);
+    }
+    .hero h1 em { color: var(--c-primary); font-style: italic; text-decoration: none; }
+    .hero-subtitle {
+      font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+      line-height: 1.45;
+      color: var(--c-muted);
+      max-width: 600px;
+      margin: 0 auto clamp(1.1rem, 2.2vh, 1.85rem);
+    }
+    .hero-calc-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--c-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .hero-calc-link:hover { color: var(--c-dark); }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    .hero-proof {
+      max-width: 760px;
+      margin: clamp(1.5rem, 3vh, 3rem) auto 0;
+      padding-top: clamp(1.1rem, 2.2vh, 2.25rem);
+      border-top: 1px solid var(--c-border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(0.9rem, 1.8vh, 1.4rem);
+      text-align: center;
+    }
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(1.5rem, 3vw, 2.5rem);
+      flex-wrap: wrap;
+    }
+    .proof-item { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .proof-divider { width: 1px; height: 40px; background: var(--c-border); }
+    .metric-value {
+      font-family: var(--ff-display);
+      font-size: clamp(1.9rem, 1.3rem + 1.3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--c-primary);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .metric-label { font-size: 13px; color: var(--c-muted); }
+    .proof-quote {
+      font-size: 15px;
+      color: var(--c-dark);
+      font-style: italic;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+    .proof-quote small {
+      display: block;
+      margin-top: 0.5rem;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      color: var(--c-muted);
+    }
+    .proof-source-link {
+      color: var(--c-primary);
+      text-decoration: underline;
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* Интерактивные элементы <details> (Методология) */
+    .methodology summary {
+      cursor: pointer;
+      color: var(--c-primary);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 500;
+      display: inline-block;
+      list-style: none;
+    }
+    .methodology summary::-webkit-details-marker {
+      display: none;
+    }
+    .methodology summary::after {
+      content: ' ▾';
+    }
+    .methodology[open] summary::after {
+      content: ' ▴';
+    }
+    .methodology p {
+      margin-top: 0.5rem;
+      padding-left: 0.75rem;
+      border-left: 2px solid var(--c-border);
+      text-align: left;
+    }
+    /* Специфичные стили для разных блоков методологии */
+    .methodology-hero {
+      font-size: 12px;
+      color: var(--c-muted);
+      opacity: 0.8;
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+    .methodology-hero p {
+      text-align: center;
+      border-left: none;
+      padding-left: 0;
+    }
+    .compare-methodology {
+      font-size: 12px;
+      color: var(--c-muted);
+      margin-top: 1rem;
+      line-height: 1.5;
+      opacity: 0.8;
+    }
+
+    /* C. Квиз */
+    .quiz-container {
+      background: var(--c-surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2.5rem;
+      border: 1px solid var(--c-border);
+    }
+    .quiz-header { margin-bottom: 2rem; }
+    .progress-bar {
+      height: 4px;
+      background: var(--c-paper);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    .progress-fill { height: 100%; background: var(--c-gold); width: 0%; transition: width 0.4s ease; }
+    .quiz-step { font-size: 13px; color: var(--c-muted); }
+    .quiz-question { font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--c-dark); }
+    .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .quiz-option {
+      padding: 1.2rem;
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      background: var(--c-surface);
+      cursor: pointer;
+      font-size: 14px;
+      transition: all var(--transition);
+      text-align: left;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      font-family: inherit;
+      color: inherit;
+    }
+    .quiz-option:hover { border-color: var(--c-primary); background: rgba(26,58,92,0.03); }
+    .quiz-result { display: none; text-align: center; animation: fadeIn 0.5s ease forwards; }
+    .quiz-result.active { display: block; }
+    .quiz-capture { padding: 0.5rem 0; }
+    .quiz-capture-sub { font-size: 14px; color: var(--c-muted); margin-bottom: 1.5rem; }
+    .quiz-capture-form { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .quiz-email-input {
+      flex: 1;
+      min-width: 220px;
+      padding: 12px 16px;
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      font-family: inherit;
+      font-size: 14px;
+      background: var(--c-surface);
+      color: var(--c-text);
+      min-height: 48px;
+    }
+    .quiz-email-input:focus { outline: 2px solid var(--c-primary); outline-offset: 2px; }
+    .quiz-skip-btn { font-size: 13px; color: var(--c-muted); background: none; border: none; cursor: pointer; padding: 0; text-decoration: underline; }
+    .quiz-skip-btn:hover { color: var(--c-dark); }
+    .quiz-share-block { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--c-border); display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .quiz-share-text { font-size: 13px; color: var(--c-muted); margin: 0; }
+
+    /* D. Боли (Tabs) */
+    .tabs-nav {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--c-border);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .tab-btn {
+      padding: 0.75rem 1rem;
+      font-weight: 500;
+      color: var(--c-muted);
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      min-height: 48px;
+      white-space: nowrap;
+    }
+    .tab-btn.active { color: var(--c-primary); border-bottom-color: var(--c-primary); font-weight: 500; }
+    .tab-content { display: none; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; animation: fadeIn 0.4s ease forwards; align-items: stretch; }
+    .tab-content.active { display: grid; }
+    .pain-card {
+      background: var(--c-surface);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--c-border);
+      transition: all var(--transition);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 240px;
+    }
+    .pain-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .pain-icon { margin-bottom: 1rem; font-size: 1.5rem; }
+    .pain-title { font-weight: 600; margin-bottom: 0.5rem; }
+    .pain-desc { font-size: 14px; color: var(--c-muted); margin-bottom: 1rem; flex-grow: 1; }
+    .pain-price { font-size: 13px; color: var(--c-dark); font-weight: 600; background: var(--c-paper); padding: 0.5rem; border-radius: 4px; align-self: flex-start; }
+    .pain-cta { grid-column: 1 / -1; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; padding-top: 1.5rem; margin-top: 0.5rem; border-top: 1px solid var(--c-border); font-size: 14px; color: var(--c-muted); }
+    .pain-cta-link { font-weight: 600; color: var(--c-primary); text-decoration: underline; text-underline-offset: 3px; }
+    .pain-cta-link:hover { color: var(--c-dark); }
+
+    /* E. Калькулятор */
+    .calc-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 3rem; align-items: start; }
+    .calc-controls { display: flex; flex-direction: column; gap: 1.5rem; }
+    .calc-field label { display: flex; justify-content: space-between; font-size: 14px; font-weight: 500; margin-bottom: 0.5rem; color: var(--c-text); }
+    .calc-field label span:last-child { font-variant-numeric: tabular-nums; color: var(--c-muted); }
+    .calc-input-wrap { display: flex; align-items: center; gap: 1rem; }
+    .calc-input-wrap input[type="range"] {
+      flex: 1; height: 4px; border-radius: 2px; background: var(--c-border); appearance: none; outline: none; accent-color: var(--c-primary);
+    }
+    .calc-input-wrap input[type="range"]::-webkit-slider-thumb {
+      appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--c-primary); cursor: pointer;
+    }
+    .calc-input-wrap input[type="number"] {
+      width: 100px; padding: 0.5rem; border: 1px solid var(--c-border); border-radius: 4px; font-family: inherit; font-variant-numeric: tabular-nums; min-height: 40px;
+    }
+    .calc-results {
+      background: var(--c-dark);
+      color: #fff;
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 280px;
+    }
+    .result-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 1.5rem; margin-bottom: 2rem; }
+    .res-box { background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 4px; min-width: 0; }
+    .res-val {
+      font-family: var(--ff-display);
+      font-variant-numeric: tabular-nums;
+      font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+      color: var(--c-gold);
+      font-weight: 700;
+      line-height: 1.2;
+      display: block;
+      word-break: break-word;
+    }
+    .res-label { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 0.25rem; line-height: 1.4; }
+    .res-total { background: rgba(196,136,58,0.15); padding: 1.5rem; border-radius: 4px; border-left: 4px solid var(--c-gold); }
+    .res-total-val { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; color: #fff; line-height: 1.4; white-space: normal; }
+    .res-total-val .accent-number { color: var(--c-gold); }
+    .res-total-sub { font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.4; }
+    
+    .calc-cta {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 1.5rem 2rem;
+    }
+    .calc-cta-text { font-size: 15px; color: var(--c-muted); margin: 0; flex: 1 1 auto; min-width: 0; line-height: 1.5; }
+    .calc-cta-btn { flex-shrink: 0; }
+    .calc-footnote {
+      margin-top: 1.5rem;
+      font-size: 12px;
+      color: var(--c-muted);
+      opacity: 0.8;
+      line-height: 1.55;
+      border-top: 1px solid var(--c-border);
+      padding-top: 1rem;
+      max-width: none;
+    }
+    .methodology-summary { margin-bottom: 0.5rem; }
+
+    /* F. Степпер процесса */
+    .stepper { display: flex; justify-content: space-between; position: relative; }
+    .stepper::before { content: ''; position: absolute; top: 24px; left: 0; right: 0; height: 2px; background: var(--c-border); z-index: 1; }
+    .step { position: relative; z-index: 2; flex: 1; text-align: center; padding: 0 1rem; }
+    .step-num {
+      width: 48px;
+      height: 48px;
+      background: var(--c-surface);
+      border: 2px solid var(--c-primary);
+      color: var(--c-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      margin: 0 auto 1rem;
+      transition: all var(--transition);
+      font-family: var(--ff-display);
+      font-size: 1.25rem;
+    }
+    .step.active .step-num { background: var(--c-primary); border-color: var(--c-primary); color: #fff; box-shadow: 0 0 0 6px rgba(26,58,92,0.1); }
+    .step-title { font-weight: 600; font-size: 15px; margin-bottom: 0.25rem; color: var(--c-dark); }
+    .step-time { font-size: 12px; color: var(--c-gold); margin-bottom: 0.5rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+    .step-desc { font-size: 13px; color: var(--c-muted); }
+
+    /* G. Пакеты */
+    .billing-toggle { display: flex; justify-content: center; margin-bottom: 3rem; }
+    .toggle-wrap { background: var(--c-border); padding: 4px; border-radius: 30px; display: inline-flex; }
+    .toggle-btn { padding: 0.5rem 1.5rem; border-radius: 30px; font-size: 14px; font-weight: 500; color: var(--c-muted); min-height: 40px; }
+    .toggle-btn.active { background: var(--c-surface); color: var(--c-dark); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .toggle-badge { display: inline-block; margin-left: 6px; padding: 2px 8px; background: rgba(196,136,58,0.15); color: var(--c-gold); border-radius: 20px; font-size: 11px; font-weight: 600; letter-spacing: 0.03em; vertical-align: middle; line-height: 1.4; }
+    .packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; align-items: stretch; }
+    
+    .pkg-card {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      padding-top: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow var(--transition), transform var(--transition);
+      position: relative;
+    }
+    .pkg-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .pkg-card.highlight { border: 2px solid var(--c-primary); box-shadow: var(--shadow); padding-top: 3.5rem; }
+    .pkg-card.highlight:hover { transform: translateY(-3px); }
+    .pkg-card.premium { background: var(--c-dark); color: #fff; }
+    .pkg-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--c-gold); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; transition: opacity 0.3s ease, visibility 0.3s ease; }
+    .pkg-rec-badge { position: absolute; top: 0.75rem; left: 2rem; right: 2rem; visibility: hidden; opacity: 0; background: var(--c-gold); color: #fff; font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 4px; text-align: center; letter-spacing: 0.04em; line-height: 1.5; transition: opacity 0.3s ease, visibility 0.3s ease; }
+    .pkg-card.recommended { border-color: var(--c-gold) !important; box-shadow: 0 0 0 1px var(--c-gold), var(--shadow) !important; animation: rec-glow 2.5s ease-in-out infinite; z-index: 2; }
+    .pkg-card.recommended .pkg-rec-badge { visibility: visible; opacity: 1; }
+    .pkg-card.recommended .pkg-badge { opacity: 0; visibility: hidden; }
+    @keyframes rec-glow {
+      0%, 100% { box-shadow: 0 0 0 1px var(--c-gold), var(--shadow); }
+      50%       { box-shadow: 0 0 0 4px rgba(196,136,58,0.4), var(--shadow); }
+    }
+    .pkg-icon { margin-bottom: 0.5rem; stroke: var(--c-primary); }
+    .pkg-card.highlight .pkg-icon { stroke: var(--c-primary); }
+    .pkg-card.premium .pkg-icon { stroke: rgba(255,255,255,0.8); }
+    .pkg-name { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--c-dark); }
+    .pkg-card.premium .pkg-name { color: #fff; }
+    .pkg-target { font-size: 13px; color: var(--c-muted); margin-bottom: 1.5rem; min-height: 40px; }
+    .pkg-card.premium .pkg-target { color: rgba(255,255,255,0.6); }
+    .pkg-price { font-family: var(--ff-display); font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--c-dark); }
+    .pkg-card.premium .pkg-price { color: #fff; }
+    .pkg-price span { font-family: var(--ff-body); font-size: 14px; font-weight: 400; color: var(--c-muted); }
+    .pkg-card.premium .pkg-price span { color: rgba(255,255,255,0.6); }
+    .pkg-features { flex: 1; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .pkg-features li { position: relative; padding-left: 1.5rem; font-size: 14px; color: var(--c-text); line-height: 1.5; }
+    .pkg-card.premium .pkg-features li { color: rgba(255,255,255,0.9); }
+    .pkg-features li::before { content: '✓'; position: absolute; left: 0; color: var(--c-gold); font-weight: 700; }
+    .pkg-card.premium .pkg-features li::before { color: rgba(196,136,58,0.8); }
+
+    /* H. Сравнение (Аутсорс vs Штат) */
+    .compare-table-wrap { overflow-x: auto; margin-top: 4rem; -webkit-overflow-scrolling: touch; }
+    .compare-table-header { margin-bottom: 1rem; }
+    .compare-table-sub { font-size: 14px; color: var(--c-muted); margin-top: 0.5rem; }
+    .compare-table { width: 100%; min-width: 520px; border-collapse: collapse; background: var(--c-surface); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+    .compare-table th, .compare-table td { padding: 1.25rem; text-align: left; border-bottom: 1px solid var(--c-border); font-size: 14px; }
+    .compare-table th { background: var(--c-dark); color: #fff; font-weight: 500; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td:first-child { font-weight: 600; width: 40%; color: var(--c-muted); }
+    .td-highlight { background: rgba(196, 136, 58, 0.05); color: var(--c-dark); font-weight: 600; }
+    .compare-note { font-size: 12px; font-weight: 400; color: var(--c-muted); display: block; margin-top: 3px; line-height: 1.4; }
+    .td-highlight .compare-note { color: var(--c-muted); font-weight: 400; }
+
+    /* I. Кейсы */
+    .cases-slider-wrap { position: relative; }
+    .cases-track { height: 3px; background: var(--c-border); border-radius: 2px; margin-top: 1.25rem; overflow: hidden; }
+    .cases-track-fill { height: 100%; background: var(--c-primary); border-radius: 2px; width: 33.33%; transition: width 0.2s ease; }
+    .cases-slider { display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 1rem; }
+    .cases-slider::-webkit-scrollbar { display: none; }
+    .case-card { min-width: 300px; width: 400px; scroll-snap-align: start; background: var(--c-surface); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--c-border); display: flex; flex-direction: column; flex-shrink: 0; }
+    .case-meta { font-size: 12px; color: var(--c-gold); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.08em; }
+    .case-duration { font-size: 11px; color: var(--c-primary); font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .case-problem { font-weight: 600; margin-bottom: 1rem; color: var(--c-dark); font-size: 1.1rem; line-height: 1.25; }
+    .case-metrics { display: flex; align-items: center; gap: 1rem; margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--c-border); }
+    .case-metric-box { flex: 1; }
+    .cm-val { font-family: var(--ff-display); font-size: 1.5rem; font-weight: 700; color: var(--c-dark); }
+    .cm-val.success { color: #2D6A4F; }
+    .cm-label { font-size: 11px; color: var(--c-muted); }
+
+    /* J. Доверие */
+    .trust-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: center; }
+    .trust-photo-wrap { display: flex; flex-direction: column; gap: 1.5rem; }
+    .trust-monogram { background: var(--c-border); border: none; border-radius: var(--radius); aspect-ratio: 3/4; width: 100%; display: flex; align-items: center; justify-content: center; color: var(--c-muted); font-family: var(--ff-display); font-size: 5rem; font-style: italic; font-weight: 400; }
+    .trust-tagline { font-family: var(--ff-display); font-style: italic; font-size: 1rem; color: var(--c-muted); line-height: 1.55; border-left: 3px solid var(--c-primary); padding-left: 1rem; }
+    .trust-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+    .badge { background: var(--c-paper); border: 1px solid var(--c-border); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 12px; font-weight: 500; color: var(--c-text); }
+    .nda-box { display: flex; gap: 1rem; background: rgba(26,58,92,0.05); padding: 1.5rem; border-radius: 0; border: none; border-left: 3px solid var(--c-primary); margin-top: 2rem; }
+    .nda-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .nda-text h4 { margin-bottom: 0.25rem; font-size: 15px; font-weight: 600; color: var(--c-dark); }
+    .nda-text p { font-size: 13px; color: var(--c-muted); max-width: none; }
+
+    /* K. CTA */
+    .cta-section { background: var(--c-dark); color: #fff; text-align: center; padding: 6rem 0; border-radius: 0; margin-bottom: 0; }
+    .cta-section .container { padding-block: 0; }
+    .cta-section h2 { color: #fff; margin-bottom: 1rem; }
+    .cta-pers { font-size: 1.125rem; color: var(--c-gold); margin-bottom: 2rem; min-height: 27px; line-height: 1.5; }
+    .cta-pers br { display: block; margin-top: 0.4rem; }
+    .cta-main-btn { animation: pulse-ring 2.5s infinite; }
+    .cta-reassure { margin-top: 1.25rem; font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6; max-width: none; margin-inline: auto; }
+    .cta-reassure-line { display: block; }
+    @media (max-width: 768px) { .cta-reassure-line { display: inline; } .cta-reassure-line + .cta-reassure-line::before { content: ' '; } }
+
+    /* L. Footer */
+    .footer { border-top: 1px solid var(--c-border); padding: 2rem 1.5rem; font-size: 13px; color: var(--c-muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; max-width: 100%; margin: 0 auto; box-sizing: border-box; }
+    .footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; width: 100%; }
+    .footer-right { text-align: right; }
+    .footer-link { color: var(--c-muted); text-decoration: underline; text-underline-offset: 2px; font-size: 13px; }
+    .footer-link:hover { color: var(--c-dark); }
+
+    /* 6. Анимации */
+    @keyframes pulse-ring {
+      0%   { box-shadow: 0 0 0 0 rgba(26, 58, 92, 0.4); }
+      70%  { box-shadow: 0 0 0 12px rgba(26, 58, 92, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(26, 58, 92, 0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Широкие экраны (1400px+) */
+    @media (min-width: 1400px) {
+      :root { --max-w: 1200px; }
+      .hero-center, .hero-proof { max-width: 820px; }
+      .packages-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* 7. @media queries */
+    @media (max-width: 768px) {
+      /* Мобильный бургер */
+      .nav-inner {
+        flex-direction: column;
+        overflow-x: visible;
+        white-space: normal;
+      }
+      .nav-burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 0 11px;
+        align-self: flex-end;
+        margin: 2px 0.5rem 2px auto;
+        background: none;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      .nav-burger:hover,
+      .nav-burger:focus-visible {
+        background: rgba(255,255,255,0.12);
+        outline: none;
+      }
+      /* Три линии бургера */
+      .nav-burger span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: rgba(255,255,255,0.85);
+        border-radius: 2px;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+      }
+      /* Анимация → ✕ при открытии */
+      .nav.open .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav.open .nav-burger span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+      .nav.open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      /* Ссылки скрыты по умолчанию */
+      .nav-container {
+        display: none;
+        flex-direction: column;
+        border-top: 1px solid rgba(255,255,255,0.10);
+      }
+      /* Раскрытие при .open */
+      .nav.open .nav-container { display: flex; }
+      /* Стиль ссылок в выпадающем списке */
+      .nav-container .nav-link {
+        flex: none;
+        justify-content: flex-start;
+        padding: 0.875rem 1.25rem;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+        font-size: 14px;
+      }
+      .nav-container .nav-link:last-child { border-bottom: none; }
+      
+      .hero { padding: 3.5rem 0; }
+      .hero-stats { gap: 1.5rem; align-items: flex-start; }
+      .proof-item { flex: 1 1 80px; min-width: 70px; }
+      .proof-divider { display: none; }
+      .metric-value { font-size: 2rem; }
+      .metric-label { min-height: 2.6em; }
+      .quiz-options { grid-template-columns: 1fr; }
+      .quiz-container { padding: 1.5rem; }
+      .quiz-capture-form { flex-direction: column; }
+      .quiz-email-input { min-width: auto; width: 100%; }
+      .quiz-capture-form .btn { width: 100%; }
+      .calc-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .calc-input-wrap { flex-wrap: nowrap; gap: 0.75rem; }
+      .calc-input-wrap input[type="number"] { width: 80px; font-size: 13px; }
+      .calc-results { min-height: auto; padding: 1.5rem; }
+      .result-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .res-val { font-size: 1.4rem; }
+      .calc-cta { flex-direction: column; align-items: flex-start; padding: 1.25rem; }
+      .calc-cta-btn { width: 100%; }
+      .stepper { flex-direction: column; gap: 2rem; }
+      .stepper::before { top: 0; bottom: 0; left: 24px; width: 2px; height: auto; }
+      .step { display: grid; grid-template-columns: 40px 1fr; gap: 1rem; text-align: left; padding: 0; }
+      .step-num { margin: 0; flex-shrink: 0; width: 40px; height: 40px; font-size: 1rem; }
+      .packages-grid { grid-template-columns: 1fr; }
+      .pkg-card.highlight { transform: none; box-shadow: var(--shadow); }
+      .pkg-card.highlight:hover { transform: translateY(-4px); }
+      .compare-table-wrap { overflow-x: auto; }
+      .case-card { width: 85vw; min-width: auto; flex-shrink: 0; }
+      .trust-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .trust-monogram { aspect-ratio: 1/1; max-width: 200px; margin: 0 auto; font-size: 3.5rem; }
+      .cta-section { padding: 4rem 1.5rem; border-radius: var(--radius); }
+      .cta-section h2 { font-size: clamp(1.4rem, 5vw, 2rem); }
+      .cta-main-btn { width: 100%; }
+      .footer .container { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+      .footer-right { text-align: left; }
+      .quiz-share-block { flex-direction: column; }
+      .quiz-share-btn { width: 100%; }
+    }
+
+    /* 8. @media print */
+    @media print {
+      .nav, .quiz-container { display: none; }
+      .section { opacity: 1 !important; transform: none !important; padding: 2rem 0; page-break-inside: avoid; }
+      body { background: #fff; color: #000; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- A. Sticky nav -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <button class="nav-burger" id="navBurger" aria-label="Открыть меню" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-container" id="navMenu">
+        <a href="#hero" class="nav-link">Главная</a>
+        <a href="#quiz" class="nav-link">Диагностика</a>
+        <a href="#pains" class="nav-link">Боли</a>
+        <a href="#roi" class="nav-link">Калькулятор потерь</a>
+        <a href="#process" class="nav-link">Процесс</a>
+        <a href="#packages" class="nav-link">Пакеты</a>
+        <a href="#cases" class="nav-link">Кейсы</a>
+        <a href="#contact" class="nav-link">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- B. Hero-секция -->
+    <section class="hero section visible" id="hero">
+      <div class="container">
+        <!-- Центрированный блок текста -->
+        <div class="hero-center">
+          <span class="section-label">Executive-коучинг &amp; Бизнес-психология</span>
+          <h1>
+            Выгорание и текучесть кадров тихо съедают прибыль <span style="font-family: var(--ff-body); font-weight: 400;">–</span><br>
+            обычно это <em>миллионы рублей в год.</em><br>
+            Я помогаю это остановить.
+          </h1>
+          <p class="hero-subtitle">
+            Помогаю собственникам и топ-менеджерам Москвы трансформировать выгорание, конфликты и текучесть в измеримый рост эффективности бизнеса.
+            <a href="#roi" class="hero-calc-link">Посчитайте свои потери →</a>
+          </p>
+          <div class="hero-actions">
+            <a href="#quiz" class="btn btn-primary">Пройти диагностику - бесплатно</a>
+            <a href="#packages" class="btn btn-outline">Посмотреть пакеты</a>
+          </div>
+        </div>
+        
+        <!-- Социальное доказательство - под текстом, по центру -->
+        <div class="hero-proof">
+          <div class="hero-stats">
+            <div class="proof-item">
+              <div class="metric-value" data-count="14">0</div>
+              <div class="metric-label">лет практики</div>
+            </div>
+            <div class="proof-divider"></div>
+            <div class="proof-item">
+              <div class="metric-value" data-count="200">0</div>
+              <div class="metric-label">клиентов B2B</div>
+            </div>
+            <div class="proof-divider"></div>
+            <div class="proof-item">
+              <div class="metric-value"><span data-count="87">0</span>%</div>
+              <div class="metric-label">повторных обращений</div>
+            </div>
+          </div>
+          
+          <p class="proof-quote">
+            «Результат почувствовали уже через 6 недель после первой сессии»
+            <br><small>- CEO IT-компании, Москва</small>
+          </p>
+          
+          <details class="methodology methodology-hero">
+            <summary>На чём основана оценка</summary>
+            <p>
+              Разрыв продуктивности по вовлечённости (Gallup, 2024) и стоимость замены сотрудника (SHRM: 50-200% годового оклада). Точный расчёт - в калькуляторе ниже.
+            </p>
+          </details>
+          <a href="#roi" class="proof-source-link">Посчитать для вашей компании →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- C. Квиз-диагностика -->
+    <section class="section" id="quiz">
+      <div class="container">
+        <span class="section-label">Аудит за 1 минуту</span>
+        <h2>Что мешает росту вашей компании прямо сейчас?</h2>
+        
+        <div class="quiz-container" id="quiz-block">
+          <div class="quiz-header">
+            <div class="progress-bar">
+              <div class="progress-fill" id="quiz-progress"></div>
+            </div>
+            <div class="quiz-step" id="quiz-step-text">Вопрос 1 из 4</div>
+          </div>
+          
+          <div id="quiz-content">
+            <!-- Вопросы рендерятся через JS -->
+          </div>
+          
+          <div class="quiz-result" id="quiz-result">
+            <h3 class="quiz-question">Диагностика завершена</h3>
+            <p style="margin-bottom: 2rem; color: var(--c-muted);" id="quiz-result-text">Анализируем ваши ответы...</p>
+            <button class="btn btn-primary" onclick="scrollToSection('#packages')">Посмотреть решение</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D. Блок болей -->
+    <section class="section" id="pains">
+      <div class="container">
+        <span class="section-label">Симптомы проблемы</span>
+        <h2>Узнаете свою ситуацию?</h2>
+        
+        <div class="tabs-nav" id="pain-tabs" role="tablist">
+          <button class="tab-btn active" data-target="tab-owner" role="tab" aria-selected="true" id="btn-owner" aria-controls="tab-owner">Собственник</button>
+          <button class="tab-btn" data-target="tab-hr" role="tab" aria-selected="false" id="btn-hr" aria-controls="tab-hr">HR-директор</button>
+          <button class="tab-btn" data-target="tab-top" role="tab" aria-selected="false" id="btn-top" aria-controls="tab-top">Топ-менеджер</button>
+        </div>
+
+        <div class="tab-content active" id="tab-owner" role="tabpanel" aria-labelledby="btn-owner">
+          <div class="pain-card" onclick="scrollToSection('#packages')">
+            <svg class="icon pain-icon" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21v-5h5"/></svg>
+            <h3 class="pain-title">Замыкание процессов на себе</h3>
+            <p class="pain-desc">Вы работаете по 12 часов, команда не принимает решения без вашего участия. Бизнес не масштабируется.</p>
+            <div class="pain-price">Цена: упущенная выручка</div>
+          </div>
+          <div class="pain-card" onclick="scrollToSection('#packages')">
+            <svg class="icon pain-icon" viewBox="0 0 24 24"><path d="M14.5 17.5L3 6V3h3l11.5 11.5"/><path d="M13 19l6-6"/><path d="M16 16l4 4"/><path d="M19 21l2-2"/><path d="M6 5l-2 2"/><path d="M5 6l2-2"/><path d="M9.5 6.5L21 18v3h-3L6.5 9.5"/><path d="M11 5l-6 6"/><path d="M8 8l-4-4"/><path d="M3 5l2-2"/></svg>
+            <h3 class="pain-title">Конфликты партнеров</h3>
+            <p class="pain-desc">Разное видение будущего компании приводит к саботажу решений и скрытой войне отделов.</p>
+            <div class="pain-price">Цена: риск потери бизнеса</div>
+          </div>
+          <div class="pain-card" onclick="scrollToSection('#packages')">
+            <svg class="icon pain-icon" viewBox="0 0 24 24"><path d="M14 7h2a2 2 0 0 1 2 2v6c0 1.5-1 2.5-2.5 3H8a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h2"/><path d="M12 7V3"/><path d="M22 11v2"/><path d="M12 11v6"/></svg>
+            <h3 class="pain-title">Личное выгорание</h3>
+            <p class="pain-desc">Нет энергии развивать проект, потерян смысл, бизнес воспринимается как тяжелая ноша.</p>
+            <div class="pain-price">Цена: ваше здоровье</div>
+          </div>
+          
+          <div class="pain-cta">
+            Узнали себя?
+            <a href="#cases" class="pain-cta-link">Посмотрите, как мы решили это для других →</a>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-hr" role="tabpanel" aria-labelledby="btn-hr">
+          <div class="pain-card" onclick="scrollToSection('#packages')">
+            <svg class="icon pain-icon" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            <h3 class="pain-title">Высокая текучесть топов</h3>
+            <p class="pain-desc">Ключевые сотрудники уходят к конкурентам, унося экспертизу и клиентскую базу.</p>
+            <div class="pain-price">Цена: от 6 окладов на замену</div>
+          </div>
+          <div class="pain-card" onclick="scrollToSection('#packages')">
+            <svg class="icon pain-icon" viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
+            <h3 class="pain-title">Тихий саботаж</h3>
+            <p class="pain-desc">Формальное выполнение обязанностей, отсутствие инициативы, токсичная атмосфера.</p>
+            <div class="pain-price">Цена: падение KPI на 30%</div>
+          </div>
+          <div class="pain-card" onclick="scrollToSection('#packages')">
+            <svg class="icon pain-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
+            <h3 class="pain-title">Изоляция отделов</h3>
+            <p class="pain-desc">Команды не общаются между собой, перекидывают ответственность, процессы затягиваются.</p>
+            <div class="pain-price">Цена: срыв сроков и упущенная выгода</div>
+          </div>
+          
+          <div class="pain-cta">
+            Знакомая картина?
+            <a href="#cases" class="pain-cta-link">Смотрите кейс IT-компании с -40% текучести →</a>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-top" role="tabpanel" aria-labelledby="btn-top">
+          <div class="pain-card" onclick="scrollToSection('#packages')">
+            <svg class="icon pain-icon" viewBox="0 0 24 24"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg>
+            <h3 class="pain-title">Стеклянный потолок</h3>
+            <p class="pain-desc">Достигли карьерного пика, не понимаете, куда расти дальше внутри компании.</p>
+            <div class="pain-price">Цена: стагнация дохода</div>
+          </div>
+          <div class="pain-card" onclick="scrollToSection('#packages')">
+            <svg class="icon pain-icon" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+            <h3 class="pain-title">Проблема с авторитетом</h3>
+            <p class="pain-desc">Сложно управлять коллегами после повышения, сопротивление команды.</p>
+            <div class="pain-price">Цена: срыв сроков проектов</div>
+          </div>
+          <div class="pain-card" onclick="scrollToSection('#packages')">
+            <svg class="icon pain-icon" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <h3 class="pain-title">Микроменеджмент</h3>
+            <p class="pain-desc">Руководство требует согласовывать каждый шаг, не давая вам реализовать экспертизу.</p>
+            <div class="pain-price">Цена: демотивация и выгорание</div>
+          </div>
+          
+          <div class="pain-cta">
+            Это решаемо.
+            <a href="#packages" class="pain-cta-link">Выберите формат работы →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- E. Калькулятор потерь -->
+    <section class="section" id="roi">
+      <div class="container">
+        <span class="section-label">Калькулятор потерь</span>
+        <h2>Посчитайте стоимость бездействия</h2>
+        
+        <div class="calc-grid">
+          <div class="calc-controls">
+            <div class="calc-field">
+              <label><span>Количество сотрудников</span> <span id="val-emp">-</span></label>
+              <div class="calc-input-wrap">
+                <input type="range" id="range-emp" min="5" max="1000" step="5" value="60" aria-label="количество сотрудников">
+                <input type="number" id="input-emp" min="5" max="1000" value="60">
+              </div>
+            </div>
+            
+            <div class="calc-field">
+              <label><span>% выгорания в команде</span> <span id="val-burn">-</span></label>
+              <div class="calc-input-wrap">
+                <input type="range" id="range-burn" min="0" max="60" step="5" value="20" aria-label="процент выгорания">
+                <input type="number" id="input-burn" min="0" max="60" value="20">
+              </div>
+            </div>
+            
+            <div class="calc-field">
+              <label><span>Средняя зарплата (₽/мес)</span> <span id="val-sal">-</span></label>
+              <div class="calc-input-wrap">
+                <input type="range" id="range-sal" min="50000" max="500000" step="10000" value="120000" aria-label="средняя зарплата">
+                <input type="number" id="input-sal" min="50000" max="500000" value="120000">
+              </div>
+            </div>
+            
+            <div class="calc-field">
+              <label><span>Текучесть кадров в год</span> <span id="val-turn">-</span></label>
+              <div class="calc-input-wrap">
+                <input type="range" id="range-turn" min="0" max="60" step="5" value="15" aria-label="текучесть кадров">
+                <input type="number" id="input-turn" min="0" max="60" value="15">
+              </div>
+            </div>
+          </div>
+          
+          <div class="calc-results">
+            <div class="result-grid">
+              <div class="res-box">
+                <div class="res-val" id="res-burnout">0</div>
+                <div class="res-label">Снижение продуктивности (₽/год)</div>
+              </div>
+              <div class="res-box">
+                <div class="res-val" id="res-turnover">0</div>
+                <div class="res-label">Затраты на замену (₽/год)</div>
+              </div>
+            </div>
+            <div class="res-total">
+              <div class="res-total-val">Итого потерь: <span class="accent-number" id="res-total">0 ₽</span> в год</div>
+              <div class="res-total-sub" id="res-roi">Инвестируя в пакет «Рост», вы экономите средства компании</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA под калькулятором -->
+        <div class="calc-cta" id="calc-cta-block">
+          <p class="calc-cta-text" id="calc-cta-msg">
+            Если цифры вас беспокоят - давайте обсудим, как их изменить.
+          </p>
+          <a href="#contact" class="btn btn-primary calc-cta-btn">
+            Обсудить мой случай
+          </a>
+        </div>
+        
+        <div class="calc-footnote">
+          <p class="methodology-summary">
+            Консервативная нижняя оценка по данным Gallup и SHRM - показываем нижнюю границу («от»), реальные потери обычно выше.
+          </p>
+          <details class="methodology">
+            <summary>Как мы считаем</summary>
+            <p>
+              Снижение продуктивности = (число сотрудников × % выгорания × доля остающихся, то есть (1 - текучесть)) × полный годовой ФОТ × 15% - нижняя граница разрыва продуктивности между наиболее и наименее вовлечёнными командами (Gallup, State of the Global Workplace 2024; ~15-20%). Затраты на замену = (число сотрудников × текучесть) × 50% годового оклада - нижняя граница стоимости замены сотрудника (SHRM: 50-200% годового оклада, или 6-9 окладов). Полный ФОТ = оклад × 1,3 (страховые взносы ~30%). Значения - оценка, а не гарантия.
+            </p>
+          </details>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- F. Процесс -->
+    <section class="section" id="process">
+      <div class="container">
+        <span class="section-label">Как мы работаем</span>
+        <h2>Прозрачный путь к результату</h2>
+        
+        <div class="stepper" id="stepper-block">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <div class="step-title">Диагностика</div>
+              <div class="step-time">1-3 дня</div>
+              <div class="step-desc">Глубинное интервью, аудит текущей ситуации, выявление истинных причин.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <div class="step-title">Анализ</div>
+              <div class="step-time">3-5 дней</div>
+              <div class="step-desc">Систематизация данных, подготовка отчета для руководства.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <div class="step-title">План</div>
+              <div class="step-time">1 день</div>
+              <div class="step-desc">Согласование стратегии вмешательства и метрик успеха (KPI).</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div>
+              <div class="step-title">Работа</div>
+              <div class="step-time">1-6 мес</div>
+              <div class="step-desc">Коуч-сессии, фасилитация конфликтов, тренинги для команды.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">5</div>
+            <div>
+              <div class="step-title">Результат</div>
+              <div class="step-time">Постоянно</div>
+              <div class="step-desc">Подведение итогов, замеры KPI, поддерживающее сопровождение.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- G. Пакеты услуг -->
+    <section class="section" id="packages">
+      <div class="container">
+        <span class="section-label">Инвестиции в команду</span>
+        <h2>Пакеты услуг</h2>
+        
+        <div class="billing-toggle">
+          <div class="toggle-wrap">
+            <button class="toggle-btn active" onclick="PackagesModule.toggle('month', this)">Оплата за месяц</button>
+            <button class="toggle-btn" onclick="PackagesModule.toggle('once', this)">Оплата за год <span class="toggle-badge">экономия 10%</span></button>
+          </div>
+        </div>
+
+        <div class="packages-grid">
+          <!-- Пакет 1 -->
+          <div class="pkg-card" id="pkg-start">
+            <div class="pkg-rec-badge">Рекомендуем для вас</div>
+            <svg class="icon pkg-icon" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-1.5 7-6.5 7-6.5s-2.5 1-4 0c0 0 1-4.5-2.5-6.5C9.5 5 7.5 5 7.5 5S7 8.5 8.5 11.5c.5.5 2 1.5 2 1.5s-2.5 1.5-2.5 7z"/></svg>
+            <div class="pkg-name">Поддержка</div>
+            <div class="pkg-target">Малый бизнес и команды 5-30 человек. Первый шаг - с понятным результатом.</div>
+            <div class="pkg-price"><span class="price-val" data-base="30000">30 000</span> <span>₽/мес</span></div>
+            <ul class="pkg-features">
+              <li>2 фокус-сессии в месяц (по 60 мин.) - конкретные действия, не общие разговоры</li>
+              <li>Письменный срез состояния команды раз в месяц (1 стр., PDF для руководителя)</li>
+              <li>Поддержка в мессенджере в рабочие часы - ответ в течение 4 часов</li>
+              <li>Первая диагностическая сессия - бесплатно</li>
+            </ul>
+            <a href="mailto:contact@example.com?subject=Пакет Поддержка" class="btn btn-outline">Выбрать пакет</a>
+          </div>
+
+          <!-- Пакет 2 -->
+          <div class="pkg-card highlight" id="pkg-growth">
+            <div class="pkg-badge">Выбор большинства</div>
+            <div class="pkg-rec-badge">Рекомендуем для вас</div>
+            <svg class="icon pkg-icon" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            <div class="pkg-name">Рост</div>
+            <div class="pkg-target">Компании 30-200 человек на стадии активного роста или стабилизации.</div>
+            <div class="pkg-price"><span class="price-val" data-base="75000">75 000</span> <span>₽/мес</span></div>
+            <ul class="pkg-features">
+              <li>4 сессии в месяц - еженедельный ритм работы с чёткими контрольными точками</li>
+              <li>HR-аудит психологического климата (анкетирование + интерпретация, отчёт для CEO)</li>
+              <li>1 командный тренинг или фасилитационная сессия в месяц (до 3 часов)</li>
+              <li>Детальный отчёт с динамикой KPI - ежемесячно</li>
+              <li>Прозрачные KPI и контрольные точки каждые 30 дней; если в первый месяц нет ценности - вернём оплату за этот месяц</li>
+            </ul>
+            <a href="mailto:contact@example.com?subject=Пакет Рост" class="btn btn-primary">Выбрать пакет</a>
+          </div>
+
+          <!-- Пакет 3 -->
+          <div class="pkg-card premium" id="pkg-partner">
+            <div class="pkg-rec-badge">Рекомендуем для вас</div>
+            <svg class="icon pkg-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <div class="pkg-name">Партнёр</div>
+            <div class="pkg-target">Крупный бизнес, холдинги, 200+ человек. Стратегическое партнёрство на результат.</div>
+            <div class="pkg-price"><span class="price-val" data-base="150000">150 000</span> <span>₽/мес</span></div>
+            <ul class="pkg-features">
+              <li>До 8 индивидуальных сессий в месяц для топ-менеджмента (далее - по договорённости)</li>
+              <li>Стратегический организационный консалтинг - участие в ключевых совещаниях</li>
+              <li>Антикризисное вмешательство - реакция в течение 24 часов</li>
+              <li>Приоритетная линия 24/7 для первых лиц компании</li>
+              <li>Ежеквартальный стратегический отчёт для совета директоров / акционеров</li>
+            </ul>
+            <a href="mailto:contact@example.com?subject=Пакет Партнёр" class="btn btn-primary" style="background:var(--c-paper); color:var(--c-dark);">Выбрать пакет</a>
+          </div>
+        </div>
+
+        <div class="compare-table-wrap">
+          <div class="compare-table-header">
+            <h3>Аутсорс vs Штатный психолог</h3>
+            <p class="compare-table-sub">Сравнение затрат и условий работы <strong>в месяц</strong></p>
+          </div>
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Параметр</th>
+                <th>Штатный специалист</th>
+                <th>Бизнес-психолог на аутсорсе</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Затраты в месяц</td>
+                <td>от 224&nbsp;000 ₽<br><span class="compare-note">оклад на руки 150&nbsp;000 ₽ → начисленный ≈172&nbsp;400 ₽ (НДФЛ 13%) + страховые взносы ~30% ≈ 224&nbsp;000 ₽</span></td>
+                <td class="td-highlight">от 30&nbsp;000 ₽<br><span class="compare-note">по договору ГПХ или с ИП, без налоговой нагрузки на компанию</span></td>
+              </tr>
+              <tr>
+                <td>Скорость запуска</td>
+                <td>2-4 месяца<br><span class="compare-note">поиск, отбор, онбординг, испытательный срок</span></td>
+                <td class="td-highlight">1-3 рабочих дня<br><span class="compare-note">договор, брифинг, первая сессия</span></td>
+              </tr>
+              <tr>
+                <td>Замена при болезни / отпуске</td>
+                <td>Проблема: <br><span class="compare-note">работа встаёт, придётся искать замену или перекладывать на HR</span></td>
+                <td class="td-highlight">Не нужна: <br><span class="compare-note">сессии переносятся, поддержка в мессенджере сохраняется</span></td>
+              </tr>
+              <tr>
+                <td>Независимость взгляда</td>
+                <td>Низкая: <br><span class="compare-note">становится частью системы, вовлекается в интриги и лояльности</span></td>
+                <td class="td-highlight">Высокая: <br><span class="compare-note">внешний эксперт видит картину без корпоративных фильтров</span></td>
+              </tr>
+              <tr>
+                <td>Уровень экспертизы</td>
+                <td>Средний: <br><span class="compare-note">специалист executive-уровня не пойдёт в штат за рыночный оклад</span></td>
+                <td class="td-highlight">Высокий: <br><span class="compare-note">параллельная работа с 10-20 компаниями - насмотренность и решения из практики</span></td>
+              </tr>
+              <tr>
+                <td>Гарантия результата</td>
+                <td>Отсутствует: <br><span class="compare-note">нет KPI, нет обязательств по метрикам</span></td>
+                <td class="td-highlight">Фиксируется в договоре: <br><span class="compare-note">измеримые цели, контрольные точки каждые 30 дней</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <details class="methodology compare-methodology">
+            <summary>Как считали штатную нагрузку</summary>
+            <p>
+              Расчёт для Москвы, 2026 г. Оклад на руки 150 000 ₽ ⇒ начисленный ≈ 172 400 ₽ (НДФЛ 13% удерживается у сотрудника) + страховые взносы ~30% ≈ 224 000 ₽ нагрузки на компанию.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- H. Кейсы -->
+    <section class="section" id="cases">
+      <div class="container">
+        <span class="section-label">Результаты клиентов</span>
+        <h2>Практика вместо теории</h2>
+        
+        <div class="cases-slider-wrap">
+          <div class="cases-slider" id="cases-slider">
+            <div class="case-card">
+              <div class="case-meta">IT-интегратор · 120 человек</div>
+              <div class="case-duration">Срок работы: 4 месяца</div>
+              <h3 class="case-problem">Выгорание ключевых тимлидов, срыв релизов</h3>
+              <p class="step-desc">Внедрена система профилактики выгорания, проведены фасилитационные сессии для устранения конфликта между разработкой и продажами.</p>
+              <div class="case-metrics">
+                <div class="case-metric-box">
+                  <div class="cm-val success">-40%</div>
+                  <div class="cm-label">Текучесть IT-кадров</div>
+                </div>
+                <svg class="icon cm-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                <div class="case-metric-box">
+                  <div class="cm-val">+25%</div>
+                  <div class="cm-label">Скорость релизов</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="case-card">
+              <div class="case-meta">Производство · 800 человек</div>
+              <div class="case-duration">Срок работы: 6 месяцев</div>
+              <h3 class="case-problem">Конфликты акционеров тормозили развитие</h3>
+              <p class="step-desc">Серия медиативных коуч-сессий с собственниками. Разделение зон ответственности, формирование нового видения компании.</p>
+              <div class="case-metrics">
+                <div class="case-metric-box">
+                  <div class="cm-val success">✓</div>
+                  <div class="cm-label">Вышли из 3-летней стагнации</div>
+                </div>
+                <svg class="icon cm-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                <div class="case-metric-box">
+                  <div class="cm-val success">×1,5</div>
+                  <div class="cm-label">Рост прибыли за год</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-card">
+              <div class="case-meta">Retail · 300 человек</div>
+              <div class="case-duration">Срок работы: 3 месяца</div>
+              <h3 class="case-problem">Токсичный климат в топ-менеджменте</h3>
+              <p class="step-desc">Аудит команды, замена 2 токсичных руководителей без репутационных потерь, индивидуальная работа с CEO.</p>
+              <div class="case-metrics">
+                <div class="case-metric-box">
+                  <div class="cm-val">68%</div>
+                  <div class="cm-label">Уровень стресса (было)</div>
+                </div>
+                <svg class="icon cm-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                <div class="case-metric-box">
+                  <div class="cm-val success">12%</div>
+                  <div class="cm-label">Уровень стресса (стало)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cases-track">
+            <div class="cases-track-fill" id="cases-track-fill"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- I. Доверие -->
+    <section class="section" id="trust">
+      <div class="container">
+        <div class="trust-grid">
+          <div>
+            <div class="trust-photo-wrap">
+              <div class="trust-monogram" aria-label="Фото специалиста">ЕС</div>
+              <div class="trust-tagline">«Я не занимаюсь мотивационными речами. Я работаю со структурными причинами - теми, которые мешают компании зарабатывать.»</div>
+            </div>
+          </div>
+          <div>
+            <span class="section-label">Почему мне доверяют</span>
+            <h2>Опыт, подтвержденный рынком</h2>
+            <div class="trust-badges">
+              <span class="badge">МГУ им. Ломоносова (Психология)</span>
+              <span class="badge">ICF Executive Coach</span>
+              <span class="badge">Опыт в бизнесе 10+ лет</span>
+            </div>
+            
+            <p class="trust-bio">
+              Елена Соколова - практикующий бизнес-психолог и executive-коуч с 14-летним опытом работы с первыми лицами московских компаний. 
+              Специализация: управленческие кризисы, выгорание топ-состава, конфликты акционеров и трансформации команд на стадии роста. 
+              Все кейсы - под NDA. Все договорённости - в письменном виде.
+            </p>
+            
+            <div class="nda-box">
+              <svg class="icon nda-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              <div class="nda-text">
+                <h4>Строгая конфиденциальность (NDA)</h4>
+                <p>Все, что обсуждается на сессиях, остается строго между нами. Я работаю с первыми лицами корпораций и гарантирую полное отсутствие утечек информации или публичных кейсов без вашего прямого согласия.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- J. CTA -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <h2 style="margin-bottom: var(--space-2);">Готовы остановить потери?</h2>
+        <div class="cta-pers" id="cta-personal">Запишитесь на бесплатную 30-минутную диагностическую сессию.</div>
+        <a href="mailto:contact@example.com?subject=Заявка на диагностику" class="btn btn-primary cta-main-btn">
+          Поговорить 30 минут - бесплатно
+        </a>
+        <p class="cta-reassure">
+          <span class="cta-reassure-line">Обсудим вашу ситуацию, я расскажу, как именно могу помочь.</span>
+          <span class="cta-reassure-line">Никакого давления и обязательств - только честный разговор.</span>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- K. Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <strong>Елена Соколова</strong> · Бизнес-психолог &amp; Executive-коуч<br>
+        <a href="mailto:contact@example.com" class="footer-link">contact@example.com</a>
+        · <a href="https://t.me/username" class="footer-link">Telegram</a>
+      </div>
+      <div class="footer-right">
+        Москва, B2B · © 2026<br>
+        <a href="#" class="footer-link">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- L. JS Логика -->
+  <script>
+    const CONFIG = {
+      payrollLoadFactor: 1.30,
+      productivityLossRate: { low: 0.15, mid: 0.18, high: 0.20 },
+      replacementCostRate:  { low: 0.50, mid: 0.75, high: 1.00 }
+    };
+    
+    const CONTACT = {
+      email:      'contact@example.com',
+      telegram:   'https://t.me/username',
+      phone:      '+7 (000) 000-00-00',
+      formEndpoint: ''
+    };
+
+    const formatRub = (n) => new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB', maximumFractionDigits: 0 }).format(n);
+    const formatNum = (n) => new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 }).format(Math.round(n));
+    
+    const scrollToSection = (selector) => {
+      const target = document.querySelector(selector);
+      if (!target) return;
+      const navH = document.getElementById('nav')?.offsetHeight || 52;
+      const top = target.getBoundingClientRect().top + window.scrollY - navH - 8;
+      window.scrollTo({ top, behavior: 'smooth' });
+    };
+    
+    const debounce = (func, wait) => {
+      let timeout;
+      return function executedFunction(...args) {
+        const later = () => { clearTimeout(timeout); func(...args); };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+      };
+    };
+
+    const UIModule = {
+      initObserver() {
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
+        sections.forEach(s => observer.observe(s));
+
+        const steps = document.querySelectorAll('.step');
+        const stepObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+            }
+          });
+        }, { threshold: 0.5 });
+        steps.forEach(s => stepObserver.observe(s));
+      },
+
+      initScrollspy() {
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.section');
+        const spyObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const id = '#' + entry.target.id;
+              navLinks.forEach(a => {
+                a.classList.toggle('active', a.getAttribute('href') === id);
+              });
+            }
+          });
+        }, { threshold: 0.3 });
+        sections.forEach(s => { if (s.id) spyObserver.observe(s); });
+      },
+
+      initTabs() {
+        const btns = document.querySelectorAll('.tab-btn');
+        const contents = document.querySelectorAll('.tab-content');
+        btns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            btns.forEach(b => {
+              b.classList.remove('active');
+              b.setAttribute('aria-selected', 'false');
+            });
+            contents.forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+            document.getElementById(btn.dataset.target).classList.add('active');
+          });
+        });
+      },
+
+      countUp(el, from, to, duration) {
+        if (!el) return;
+        const start = performance.now();
+        const diff = to - from;
+        function step(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+          el.textContent = Math.round(from + diff * eased);
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      },
+
+      initCountUp() {
+        document.querySelectorAll('[data-count]').forEach(el => {
+          const obs = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                this.countUp(el, 0, parseInt(el.dataset.count), 2000);
+                obs.unobserve(el);
+              }
+            });
+          }, { threshold: 0.5 });
+          obs.observe(el);
+        });
+      },
+
+      initCasesTrack() {
+        const slider = document.getElementById('cases-slider');
+        const fill = document.getElementById('cases-track-fill');
+        if (!slider || !fill) return;
+        const updateTrack = () => {
+          const scrollLeft = slider.scrollLeft;
+          const maxScroll = slider.scrollWidth - slider.clientWidth;
+          const progress = maxScroll > 0 ? scrollLeft / maxScroll : 0;
+          const pct = 33.33 + progress * 66.67;
+          fill.style.width = Math.round(pct) + '%';
+        };
+        slider.addEventListener('scroll', updateTrack, { passive: true });
+        updateTrack();
+      },
+
+      initBurger() {
+        const burger = document.getElementById('navBurger');
+        const nav    = document.getElementById('nav');
+        
+        if (!burger || !nav) return;
+        
+        function closeBurger() {
+          nav.classList.remove('open');
+          burger.setAttribute('aria-expanded', 'false');
+          burger.setAttribute('aria-label', 'Открыть меню');
+        }
+        
+        burger.addEventListener('click', function () {
+          const isOpen = nav.classList.toggle('open');
+          burger.setAttribute('aria-expanded', String(isOpen));
+          burger.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+        });
+        
+        // Закрыть при клике на ссылку
+        document.querySelectorAll('#navMenu .nav-link').forEach(function (link) {
+          link.addEventListener('click', closeBurger);
+        });
+        
+        // Закрыть по Escape
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && nav.classList.contains('open')) {
+            closeBurger();
+            burger.focus();
+          }
+        });
+      }
+    };
+
+    const QuizModule = {
+      state: { step: 0, answers: {}, finished: false },
+      questions: [
+        {
+          id: 'pain',
+          text: 'Какой запрос актуален прямо сейчас?',
+          options: [
+            { text: 'Выгорание команды', val: 'burnout' },
+            { text: 'Конфликты топов', val: 'conflict' },
+            { text: 'Текучесть кадров', val: 'turnover' },
+            { text: 'Слабая эффективность', val: 'efficiency' }
+          ]
+        },
+        {
+          id: 'size',
+          text: 'Сколько человек в вашей компании?',
+          options: [
+            { text: 'До 30', val: 'small' },
+            { text: '30-150', val: 'mid' },
+            { text: '150-500', val: 'large' },
+            { text: '500+', val: 'enterprise' }
+          ]
+        },
+        {
+          id: 'goal',
+          text: 'Что для вас приоритетнее в результате?',
+          options: [
+            { text: 'Удержать ключевых людей',     val: 'retention' },
+            { text: 'Снизить конфликтность',        val: 'conflict' },
+            { text: 'Разгрузить руководителей',     val: 'overload' },
+            { text: 'Поднять эффективность',        val: 'efficiency' }
+          ]
+        },
+        {
+          id: 'urgency',
+          text: 'Как быстро нужен результат?',
+          options: [
+            { text: 'Немедленно, горит', val: 'urgent' },
+            { text: 'В течение 1-2 месяцев', val: 'normal' },
+            { text: 'Планируем заранее', val: 'plan' }
+          ]
+        }
+      ],
+
+      render() {
+        const content = document.getElementById('quiz-content');
+        const q = this.questions[this.state.step];
+        
+        const progress = ((this.state.step + 0.5) / this.questions.length) * 100;
+        document.getElementById('quiz-progress').style.width = progress + '%';
+        document.getElementById('quiz-step-text').textContent = `Вопрос ${this.state.step + 1} из ${this.questions.length}`;
+
+        let html = `<h3 class="quiz-question">${q.text}</h3><div class="quiz-options">`;
+        q.options.forEach(opt => {
+          html += `<button type="button" class="quiz-option" onclick="QuizModule.next('${q.id}', '${opt.val}')">${opt.text}</button>`;
+        });
+        html += `</div>`;
+        
+        content.style.opacity = 0;
+        setTimeout(() => {
+          content.innerHTML = html;
+          content.style.transition = 'opacity 0.3s cubic-bezier(0.22, 0.61, 0.21, 1)';
+          content.style.opacity = 1;
+        }, 150);
+      },
+
+      next(qId, val) {
+        this.state.answers[qId] = val;
+        this.state.step++;
+        
+        if (this.state.step < this.questions.length) {
+          this.render();
+        } else {
+          this.showResult();
+        }
+      },
+
+      showResult() {
+        const content = document.getElementById('quiz-content');
+        document.getElementById('quiz-progress').style.width = '100%';
+        document.getElementById('quiz-step-text').textContent = 'Почти готово';
+
+        content.style.opacity = 0;
+        setTimeout(() => {
+          content.innerHTML = `
+            <div class="quiz-capture">
+              <h3 class="quiz-question">Диагностика готова. Куда отправить разбор?</h3>
+              <p class="quiz-capture-sub">Мы подобрали решение под ваш запрос. Оставьте email - пришлём персональный разбор и рекомендацию. Или пропустите, чтобы увидеть результат сразу.</p>
+              <div class="quiz-capture-form">
+                <input type="email" id="quiz-email" placeholder="ваш@email.ru" autocomplete="email" class="quiz-email-input">
+                <button class="btn btn-primary" onclick="QuizModule.submitCapture()">Получить разбор на почту</button>
+              </div>
+              <button class="quiz-skip-btn" onclick="QuizModule.finalize()">Пропустить и посмотреть результат →</button>
+            </div>`;
+          content.style.transition = 'opacity 0.3s cubic-bezier(0.22, 0.61, 0.21, 1)';
+          content.style.opacity = 1;
+        }, 150);
+      },
+
+      submitCapture() {
+        const emailEl = document.getElementById('quiz-email');
+        const email = emailEl ? emailEl.value.trim() : '';
+        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        
+        if (!valid) { 
+          if (emailEl) emailEl.style.borderColor = 'crimson'; 
+          return; 
+        }
+        
+        try { sessionStorage.setItem('quizEmail', email); } catch(e) {}
+        this.finalize();
+      },
+
+      finalize() {
+        if (this.state.finished) return;
+        this.state.finished = true;
+        document.getElementById('quiz-content').style.display = 'none';
+        
+        document.getElementById('quiz-progress').style.width = '100%';
+        document.getElementById('quiz-step-text').textContent = 'Анализ завершён';
+
+        const resBox = document.getElementById('quiz-result');
+        const resText = document.getElementById('quiz-result-text');
+        const ctaText = document.getElementById('cta-personal');
+        resBox.classList.add('active');
+
+        const ans = this.state.answers;
+        let recommendedPackage = 'pkg-growth';
+        let msg = '';
+
+        const urgent     = ans.urgency === 'urgent';
+        const conflict   = ans.pain === 'conflict' || ans.goal === 'conflict';
+        const overload   = ans.goal === 'overload';
+        const turnover   = ans.pain === 'turnover'   || ans.goal === 'retention';
+        const efficiency = ans.pain === 'efficiency' || ans.goal === 'efficiency';
+
+        let tier;
+        if (ans.size === 'enterprise' || ans.size === 'large') tier = 2;
+        else if (ans.size === 'mid') tier = 1;
+        else tier = 0;
+
+        if (conflict || urgent) tier = Math.min(2, tier + 1);
+        recommendedPackage = ['pkg-start', 'pkg-growth', 'pkg-partner'][tier];
+
+        if (urgent)          msg = 'Ситуация горящая - нужен интенсивный формат с быстрым стартом и реакцией в течение 24 часов.';
+        else if (conflict)   msg = 'В фокусе - конфликты в команде: структурная работа с ролями, отношениями и договорённостями.';
+        else if (turnover)   msg = 'Текучесть - симптом системной проблемы. Поможем с климатом и удержанием ключевых людей.';
+        else if (overload)   msg = 'Разгрузим руководителей и выстроим устойчивый ритм работы команды.';
+        else if (efficiency) msg = 'Сфокусируемся на росте эффективности через регулярную работу с метриками.';
+        else                 msg = 'Подберём формат для стабилизации климата и роста эффективности команды.';
+
+        resText.textContent = msg;
+        ctaText.innerHTML = msg + '<br>Запишитесь на бесплатную диагностику для обсуждения деталей.';
+        PackagesModule.highlight(recommendedPackage);
+
+        try { sessionStorage.setItem('quizData', JSON.stringify(ans)); } catch(e) {}
+
+        const quizResult = document.getElementById('quiz-result');
+        if (quizResult && !document.getElementById('quiz-share-block')) {
+          const shareBlock = document.createElement('div');
+          shareBlock.id = 'quiz-share-block';
+          shareBlock.className = 'quiz-share-block';
+          shareBlock.innerHTML = `
+            <p class="quiz-share-text">Готовите материал для руководства или партнёра?</p>
+            <button class="btn btn-outline quiz-share-btn" onclick="QuizModule.copyBrief()">
+              Скопировать краткое КП для отправки
+            </button>`;
+          quizResult.appendChild(shareBlock);
+        }
+      },
+
+      copyBrief() {
+        const brief = `Предложение: бизнес-психолог & executive-коуч на аутсорсе
+
+Для кого: собственники и топ-менеджмент московских компаний 30-500+ человек.
+
+Что решаем:
+- выгорание и снижение эффективности команды
+- конфликты в топ-менеджменте и между партнёрами
+- высокая текучесть ключевых сотрудников
+- управленческие кризисы и переходные периоды
+
+Формат работы: аутсорс. Старт за 1-3 дня, без длительного найма.
+Стоимость: от 30 000 ₽/мес - дешевле штатного специалиста в 2-3 раза.
+Гарантия: прозрачные KPI и контрольные точки каждые 30 дней; если в первый месяц нет ценности - вернём оплату за этот месяц.
+
+Подробнее и калькулятор потерь: [ссылка на КП]
+Для связи: contact@example.com`;
+        navigator.clipboard.writeText(brief).then(() => {
+          const btn = document.querySelector('.quiz-share-btn');
+          if (btn) { btn.textContent = '✓ Скопировано!'; setTimeout(() => { btn.textContent = 'Скопировать краткое КП для отправки'; }, 2500); }
+        }).catch(() => {
+          alert('Не удалось скопировать автоматически. Выделите текст вручную.');
+        });
+      },
+
+      init() {
+        this.render();
+      }
+    };
+
+    const CalculatorModule = {
+      inputs: ['emp', 'burn', 'sal', 'turn'],
+      
+      sync(id, val, type, soft = false) {
+        const range = document.getElementById('range-' + id);
+        const num   = document.getElementById('input-' + id);
+        const min = parseFloat(num.min), max = parseFloat(num.max);
+        let v = parseFloat(val); 
+        
+        if (isNaN(v)) v = soft ? 0 : min;
+        
+        if (!soft) {
+          v = Math.min(Math.max(v, min), max);
+          range.value = v; 
+          num.value = v;
+        } else {
+          range.value = Math.min(Math.max(v, min), max);
+        }
+        
+        const displayVal = (id === 'burn' || id === 'turn') ? v + '%'
+                         : (id === 'sal') ? formatNum(v) + ' ₽' : v;
+        
+        document.getElementById('val-' + id).textContent = displayVal;
+        range.setAttribute('aria-valuetext', displayVal);
+        
+        this.calculate();
+      },
+
+      calculate: debounce(function() {
+        const emp     = parseFloat(document.getElementById('input-emp').value) || 0;
+        const burnPct = parseFloat(document.getElementById('input-burn').value) || 0;
+        const sal     = parseFloat(document.getElementById('input-sal').value) || 0;
+        const turnPct = parseFloat(document.getElementById('input-turn').value) || 0;
+        
+        const annualSalary = sal * 12;
+        const churned      = emp * (turnPct / 100);
+        const affectedRem  = emp * (burnPct / 100) * (1 - turnPct / 100);
+        
+        const prodLow  = affectedRem * annualSalary * CONFIG.payrollLoadFactor * CONFIG.productivityLossRate.low;
+        const replLow  = churned     * annualSalary * CONFIG.replacementCostRate.low;
+        const totalLow = prodLow + replLow;
+        
+        const has = totalLow > 0;
+        
+        document.getElementById('res-burnout').textContent  = has ? 'от ' + formatRub(prodLow)  : '-';
+        document.getElementById('res-turnover').textContent = has ? 'от ' + formatRub(replLow)  : '-';
+        document.getElementById('res-total').textContent    = has ? 'от ' + formatRub(totalLow) : '0 ₽';
+        
+        const growthBase   = parseInt(document.querySelector('#pkg-growth .price-val')?.dataset.base) || 75000;
+        const growthAnnual = growthBase * 12;
+        const payback = has ? (totalLow / growthAnnual).toFixed(1).replace('.', ',') : '0';
+        
+        const roiEl = document.getElementById('res-roi');
+        roiEl.textContent = has
+          ? `Это нижняя оценка - реальные потери обычно выше. Окупаемость сопровождения - от ×${payback}.`
+          : 'Заполните параметры, чтобы оценить потери.';
+          
+        const ctaMsg = document.getElementById('calc-cta-msg');
+        if (ctaMsg) {
+          ctaMsg.textContent = has
+            ? `Вы теряете от ${formatRub(totalLow)} в год. Давайте обсудим, как это остановить.`
+            : 'Если цифры вас беспокоят - давайте обсудим, как их изменить.';
+        }
+      }, 80),
+
+      init() {
+        this.inputs.forEach(id => {
+          const range = document.getElementById('range-' + id);
+          const num   = document.getElementById('input-' + id);
+          range.addEventListener('input',  (e) => this.sync(id, e.target.value, 'range'));
+          num.addEventListener('input',   (e) => this.sync(id, e.target.value, 'number', true));
+          num.addEventListener('change',  (e) => this.sync(id, e.target.value, 'number'));
+        });
+        
+        this.inputs.forEach(id => this.sync(id, document.getElementById('input-' + id).value, 'number'));
+      }
+    };
+
+    const PackagesModule = {
+      isMonthly: true,
+      
+      toggle(type, el) {
+        const btns = document.querySelectorAll('.toggle-btn');
+        btns.forEach(b => b.classList.remove('active'));
+        if(el) el.classList.add('active');
+        
+        this.isMonthly = (type === 'month');
+        
+        document.querySelectorAll('.price-val').forEach(el => {
+          const basePrice = parseInt(el.dataset.base);
+          const finalPrice = this.isMonthly ? basePrice : (basePrice * 12 * 0.9);
+          el.textContent = formatNum(finalPrice);
+          el.nextElementSibling.textContent = this.isMonthly ? '₽/мес' : '₽/год';
+        });
+      },
+
+      highlight(pkgId) {
+        document.querySelectorAll('.pkg-card').forEach(c => {
+          c.classList.remove('recommended');
+        });
+        const target = document.getElementById(pkgId);
+        if(target) {
+          target.classList.add('recommended');
+        }
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      UIModule.initObserver();
+      UIModule.initScrollspy();
+      UIModule.initTabs();
+      UIModule.initCountUp();
+      UIModule.initCasesTrack();
+      UIModule.initBurger();
+      
+      QuizModule.init();
+      CalculatorModule.init();
+      
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          scrollToSection(this.getAttribute('href'));
+        });
+      });
+    });
+  </script>
+</body>
+</html>
